@@ -1,13 +1,433 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+ 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --header: #86A3B8;
+  --background:rgba(255, 255, 255, 0.988);
+  /* --calbg:rgba(180, 198, 200, 0.988); */
 }
+
+/* header start */ 
+.Outter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var( --background);
+}
+.h3 {
+ /* border-bottom: 1px solid var(--header); */
+ font-size: 25px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+  background-color: var(--header);
+  color: rgb(64, 61, 61);
+  font-weight: 900;
+}
+.nav{
+  /* border: 2px solid; */
+  border-top: none;
+  margin-top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header);
+}
+
+.nav ul{
+  color: var(--background);
+  list-style: none;
+  width: 11em;
+  margin: 8px;
+  padding-bottom:  7px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+}
+.nav li{
+  
+  margin-bottom: 8px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  width: 9.5em;
+  border-bottom:2px solid ;
+  transition: 1s;
+  /* border-bottom:2px solid ; */
+}
+
+li:hover{
+  background-color: var(--background);
+  border-bottom:none ;
+}
+
+/* header end */
+
+/* footer start */
+
+footer{
+  /* border: 2px solid; */
+  min-height: 20vh;
+  /* background-color: var(--header); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-outter{
+  /* border: 2px solid; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ background-color: var(--header);
+}
+
+.contact{
+  /* background-color: var(--header);
+  border: 2px solid; */
+  display: contents;
+  align-items: center;
+  justify-content: center;
+}
+.contact h4{
+  font-size: 2em;
+  font-weight: 600;
+  color: #572d91;
+}
+.icons{
+  /* border: 2px solid; */
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+  margin: 3px;
+}
+/* FOOTER END */
+
+
+ /* content start */
+.content-outter{
+  /* border: 5px solid rgb(182, 155, 155); */
+  min-height: 120vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  
+}
+/* calculator start */
+.calculator-outter{
+  /* border: 2px solid red; */
+  background-color: var( --background);
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+
+}
+.calculator{
+  box-shadow: 2px 4px 5px 2px var( --header);
+  /* border: 2px solid; */
+  border-radius: 20px;
+  max-height: 65%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4em;
+  background-color: var( --header);
+
+}
+.calculator h1{
+  color: aliceblue;
+  margin-top: 1em;
+  /* font-size: 2em; */
+  
+}
+
+.input{
+  /* border: 2px solid; */
+  padding-top: 2em;
+}
+
+.input input{
+  font-size: 1.4em;
+  padding: 5px;
+  margin-bottom: 12px;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid rgb(203, 203, 203);
+}
+
+.button{
+  padding: 3px;
+  width: 60%;
+}
+button{
+  padding: 7px;
+  background-color: black;
+  color: aliceblue;
+  border: none;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: 70%;
+  transition: .5s;
+}
+button:hover{
+  background-color: aliceblue;
+  color: #000000;
+  width: 100%;
+}
+.clear-button button{
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  width: 20%;
+  margin-left: 2px;
+  border: none;
+  border-radius: 10px;
+  color: red;
+  font-weight: 600;
+}
+.clear-button button:hover{
+  width: 50%;
+  background-color: aliceblue;
+  color: #000000;
+}
+.output{
+  width: 100%;
+  min-height: 30vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid; */
+  font-size: 2em;
+  margin-top: 15px;
+}
+
+/* Home start */
+.outterhome{
+  display: flex;
+  /* border: 2px solid; */
+  min-height: 120vh;
+  width: 100%;
+  background-color: var(--background);
+  
+}
+.home{
+  /* border: 2px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.h2 h2{
+  font-size: 1.7em;
+  letter-spacing: 2px;
+  color: black;
+}
+.points{
+  /* border: 2px solid; */
+  background-color: var(--header);
+  color: aliceblue;
+  width: 75%;
+  margin: 5px;
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 4px 6px 7px 4px var( --header);
+  word-wrap: normal;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+}
+.bones{
+  /* border: 2px solid; */
+  box-shadow: 2px 4px 5px 2px var( --header);
+  border-radius: 10px;
+  margin-top: 3em;
+  min-height: 15vh;
+  padding: 15px;
+  font-size: larger;
+  width: 97%;
+}
+.bones h2{
+  color: rgb(255, 0, 0);
+}
+
+/* chart start */
+.outter-chart{
+  /* border: 2px solid; */
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: var(--background);
+}
+.table{
+  border: 2px solid red;
+  width: 70vw;
+  height: 70vh;
+  display: contents;
+  background-color: brown;
+}
+table{
+  font-weight: 500;
+  font-size: 1.6em;
+  padding: 2em;
+  box-shadow: 2px 4px 3px 2px var( --header);
+  color: aliceblue;
+  background-color: var(--header);
+}
+
+@media screen  and (max-width:800px){
+
+  .calculator-outter{
+    
+    height: 75vh;
+  }
+  .calculator{
+    width: 80%;
+    /* border: 5px solid; */
+  }
+  
+  
+  .output{
+    width: 100%;
+    min-height: 10vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid; */
+    font-size: 1em;
+    margin-top: 5px;
+  }
+  .content-outter{
+    /* border: 5px solid rgb(182, 155, 155); */
+    /* border: 5px solid; */
+    min-height: 30vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+  }
+    /* home  */
+    .points{
+      font-size:small ;
+      border: 2px solid;
+      width: 97%;
+      }
+      .bones{
+        font-size: large;
+      }
+    
+      /* header */
+      .h3{
+        font-size: 12px;
+        letter-spacing: 0px;
+      }
+      
+
+}
+
+@media screen  and (max-width:550px){
+
+
+  .calculator-outter{
+    /* border: 12px solid red; */
+    background-color: var( --background);
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+  }
+  .calculator{
+    box-shadow: 2px 4px 5px 2px var( --header);
+    /* border: 2px solid; */
+    border-radius: 20px;
+    max-height: 96%;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1em;
+    background-color: var( --header);
+  
+  }
+  .calculator h1{
+    color: aliceblue;
+    margin-top: 1em;
+    /* font-size: 2em; */
+  }
+  
+  .input input{
+    font-size: 1em;
+  }
+  
+  .clear-button button{width: 30%;}
+
+  .output{
+    width: 100%;
+    min-height: 35vh;
+    display: contents;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid; */
+    font-size: 1.3em;
+    /* margin-top: 1px;
+    margin-bottom: 5px; */
+  }
+  .content-outter{
+    /* border: 5px solid rgb(182, 155, 155); */
+    /* border: 5px solid; */
+    min-height: 90vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  /* home  */
+  .points{
+  font-size:small ;
+  border: 2px solid;
+  width: 97%;
+  }
+  .bones{
+    font-size: large;
+  }
+
+  /* header */
+  .h3{
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+
+  /* footer */
+  .footer-outter{
+    border: 2px solid;
+    /* border-top: 20px solid white; */
+    margin-top: 1em;
+    background-color: var(--header);
+    color: aliceblue;
+    /* margin: 5em; */
+  }
+  .footer{
+    border: 3px solid;
+  }
+  /* chart */
+
+  
+
+
+}
+
